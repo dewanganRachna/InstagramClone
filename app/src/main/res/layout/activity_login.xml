@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
+    tools:context=".LoginActivity">
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
         android:id="@+id/profile_image"
         android:layout_width="96dp"
         android:layout_height="96dp"
@@ -18,25 +18,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/plus"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="86dp"
 
-        android:layout_marginBottom="4dp"
-        android:src="@drawable/plus"
-        app:layout_constraintBottom_toBottomOf="@+id/profile_image"
-        app:layout_constraintEnd_toEndOf="@+id/profile_image"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/profile_image"
-        app:layout_constraintStart_toStartOf="@+id/profile_image" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/name"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="name"
+        android:hint="Email"
         android:layout_marginTop="56dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
@@ -51,26 +39,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/name"
-        app:layout_constraintStart_toStartOf="@+id/name"
-        app:layout_constraintTop_toBottomOf="@+id/name">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="visible" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password"
+        android:id="@+id/pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Password"
@@ -92,21 +61,25 @@
         android:id="@+id/signUpButton"
         android:layout_width="0dp"
         android:layout_height="55dp"
-        android:layout_marginTop="16dp"
-        android:text="Register"
-        android:textSize="18sp"
         android:background="@drawable/buttonborder"
-        app:layout_constraintEnd_toEndOf="@+id/password"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        android:text="Login"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/pass"
+        app:layout_constraintStart_toStartOf="@+id/pass"
+        app:layout_constraintTop_toBottomOf="@+id/pass" />
 
-    <TextView
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Already have an account login?"
+    <Button
+        android:id="@+id/pButton"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="@drawable/buttonborder"
+        android:text="Create New Account"
+        android:layout_marginBottom="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpButton" />
+        app:layout_constraintEnd_toEndOf="@+id/signUpButton"
+        app:layout_constraintStart_toStartOf="@+id/signUpButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,6 @@
-package Model
+package com.mini.instagramclone.Models
 
-class user {
+class User {
     var image:String?=null
     var name:String?=null
     var email:String?=null
@@ -8,7 +8,7 @@ class user {
     constructor()
     constructor(image: String?, name: String?, email: String?, password: String?) {
         this.image = image
-        this.name = name
+        this .name = name
         this.email = email
         this.password = password
     }
